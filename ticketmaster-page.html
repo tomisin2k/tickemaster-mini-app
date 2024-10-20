@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ticketmaster-page.css">
+    <script src="https://kit.fontawesome.com/885599b430.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+   <div class="div-header">
+
+    <div class="tickermaster-logo-and-navbar">
+      <div class="logo"><img class="logo-img" src="images/tm-bg.png" alt="Ticketmaster Logo"></div>
+      <div class="icon-and-navbar">
+          <img src="images/sign-in.png" alt="Sign In Icon">
+          <p>sell</p>
+          <div class="hamburger-icon">
+              <div></div>
+          </div>
+
+          <div class="dropdown-menu">
+            <a href="#">My Account</a>
+            <a href="#">My Tickets</a>
+            <a href="#">My Listings</a>
+            <a href="#">Settings</a>
+            <a href="#">Learn About Verified Tickets</a>
+            <a href="#" class="sign-out">Not Alex? Sign Out</a>
+        </div>
+        
+      </div>
+  </div>
+
+<div class="div-header-text">
+<p>Let's Make Live Happen</p>
+<p>Shop millions of live events and discover can't-miss
+     concerts, games, theater and more </p>
+</div>
+
+<div class="div-for-search">
+<div class="zip-code-and-date">
+<div class="zip">
+    <i></i>
+    <p>City or Zip Code</p>
+</div>
+
+<div class="date">
+    <i></i>
+    <p>All Dates</p>
+</div>
+</div>
+<div class="search-form">
+  <i class="fas fa-search"></i>
+  <input type="text" id="search" placeholder="Search for artists, venues, and events">
+</div>
+</div>
+
+</div>
+
+<div class="nfl-image">
+<img src="images/nfl-logo.jpg" alt="">
+</div>
+
+<div class="grab-ticket-today">
+<p>NFL Tickets</p>
+<p>Grab tickets today and be there live in the stands!</p>
+</div>
+
+<div class="three-dots">
+    <p>Three Dots</p>
+</div>
+
+  </body>
+
+  <!-- Add this script at the bottom of your body tag -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerIcon = document.querySelector('.hamburger-icon');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+  
+      hamburgerIcon.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('show');
+          hamburgerIcon.classList.toggle('active');
+      });
+  
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+          if (!hamburgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+              dropdownMenu.classList.remove('show');
+              hamburgerIcon.classList.remove('active');
+          }
+      });
+  });
+  </script>
+
+</html>
