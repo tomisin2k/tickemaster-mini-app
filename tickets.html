@@ -44,10 +44,15 @@ nav {
 
 .spotify-presale {
     text-align: center;
-    background-color: #0051C8;
+    background-color: #003b94;
     color: white;
-    padding: 8px;
-    font-size: 14px;
+    padding: 15px;
+    font-size: 12px;
+}
+
+.spotify-presale p {
+    margin: 0;  /* This ensures no extra space from paragraph margins */
+    line-height: 1;  /* This ensures minimal line height */
 }
 
 .section-div {
@@ -56,38 +61,50 @@ nav {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background-color: white;
+    background-color: #0051C8;
 }
 
 .section-div > div {
     flex: 1;
+    color: white;
 }
 
 .section-div p:first-child {
-    color: #666;
-    font-size: 12px;
+    color: white;
+    font-size: 13px;
     margin: 0;
     text-transform: uppercase;
+    opacity: 0.7;
 }
 
 .section-div p:last-child {
     font-size: 18px;
-    font-weight: bold;
     margin: 5px 0 0 0;
+    font-weight: bold;
 }
 
 .image\+tix.deets {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust this height as needed */
-    overflow: hidden;
+    height: auto;
+}
+
+.image\+tix.deets::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent 40%, rgba(0,0,0,0.8));
+    pointer-events: none;
 }
 
 .image\+tix.deets img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* This ensures the image covers the space without distortion */
+    height: auto;
     display: block;
+    object-fit: contain;
 }
 
 .image\+tix.deets p {
@@ -98,22 +115,20 @@ nav {
     left: 0;
     right: 0;
     padding: 8px 16px;
-    opacity: 0.8;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Creates a dark gradient for better text readability */
+    z-index: 2;
+    opacity: 0.79;
+
 }
 
 .cigs {
     font-size: 19px;
-    opacity: 0.5;
 }
 
-/* Position first paragraph (tour name) */
 .image\+tix.deets p:first-of-type {
-    bottom: 30px; /* Adjust this value as needed */
-    font-weight: bold;
+    bottom: 30px;
+    /* font-weight: bold; */
 }
 
-/* Position second paragraph (date and venue) */
 .image\+tix.deets p:last-of-type {
     bottom: 8px;
     font-size: 0.9em;
@@ -138,7 +153,7 @@ nav {
 }
 
 .empty-div {
-    display: none; /* Remove since it's not in the reference design */
+    display: none;
 }
 
 .four-dots {
@@ -183,6 +198,11 @@ nav {
     font-family: sans-serif;
     font-weight: lighter;
 }
+
+.label {
+    font-size: 70px;
+}
+
     </style>
 </head>
 <body>
@@ -193,29 +213,32 @@ nav {
     </nav>
 
     <div class="ticket-div">
-        <div class="spotify-presale"><p>Spotify Presale</p></div>
+        <!-- <div class="spotify-presale"><p>Spotify Presale</p></div> -->
         <div class="section-div">
             <div>
-                <p>sec</p>
-                <p>GA8</p>
+                <p class="label">sec</p>
+                <p>128</p>
             </div>
             <div>
-                <p>ROW</p>
+                <p class="label">ROW</p>
                 <p>GA0</p>
             </div>
             <div>
-                <p>SEAT</p>
-                <p>-</p>
+                <p class="label">SEAT</p>
+                <p>127</p>
             </div>
         </div>
 
         <div class="image+tix deets">
-            <img src="images/alisson.jpg" alt="" srcset="">
-            <p class="cigs">Cigarettes After Sex - 2023 North American Tour</p>
-            <p>Sat, Sep 9, 8pm. The Anthem</p>
+            <!-- This is where you change your image-->
+            <img src="images/whatsapp-pic.jpeg" alt="" srcset="">
+            <p class="cigs">Taylor swift | The Eras tour </p>
+            <!-- This is where you change the time and venue -->
+            <p>Sat Nov 16 ,2024. 7:00 PM . Rogers center Toronto.</p>
         </div>
 
         <div class="GA-standing">
+            <!-- This is where you edit if it is a GA ticket or seating ticket -->
             <p>GA Standing</p>
         </div>
 
